@@ -1,9 +1,9 @@
 <?php
 function getDBConnection() {
     $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "univeristy_db";
+    $username = "your_username";
+    $password = "your_password";
+    $dbname = "your_db_name";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
