@@ -1,5 +1,12 @@
 
-   <?php include 'header-nav.php';?>
+<?php include 'header.php';?>
+
+<?php
+    // Fetch all courses
+
+    $courses = getCourses();
+?>
+
     <div class="banner">
         <div class="search-bar">
             <input type="text" placeholder="Search for courses...">
@@ -11,31 +18,14 @@
             <div class="slider-container">
                 <button class="slider-button left" onclick="moveSlider(-1)">&#10094;</button>
                 <div class="slider" id="courseSlider">
+                <!-- Add more courses as needed -->
+                
+                <?php foreach ($courses as $course): ?>
                     <div class="card">
-                        <h3>Course 1</h3>
+                        <h3><?php echo $course;?></h3>
                         <p>Description of course 1.</p>
                     </div>
-                    <div class="card">
-                        <h3>Course 2</h3>
-                        <p>Description of course 2.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Course 3</h3>
-                        <p>Description of course 3.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Course 4</h3>
-                        <p>Description of course 4.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Course 5</h3>
-                        <p>Description of course 5.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Course 6</h3>
-                        <p>Description of course 6.</p>
-                    </div>
-                    <!-- Add more courses as needed -->
+                <?php endforeach;?>
                 </div>
                 <button class="slider-button right" onclick="moveSlider(1)">&#10095;</button>
             </div>
@@ -60,15 +50,6 @@
         </section>
     </div>
    <?php include 'footer.php'; ?>
-    <script>
-        function moveSlider(direction) {
-            const slider = document.getElementById('courseSlider');
-            const scrollAmount = direction * 220; // Adjust based on card width + margin
-            slider.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+    
 </body>
 </html>

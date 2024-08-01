@@ -1,17 +1,18 @@
 <?php
-$servername = "localhost";
-$username = "replace_with_your_username";
-$password = "replace_with_your_password";
-$dbName = 'your_db_name';
+function getDBConnection() {
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "univeristy_db";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbName);
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    return $conn;
 }
-echo "Connected successfully";
-
-return $conn;
 ?>
