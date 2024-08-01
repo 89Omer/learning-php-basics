@@ -1,3 +1,3 @@
-<?php
-    echo "<p> Copyright 2024 NULABS</p>";
-?>
+<footer>
+        &copy; 2024 University Name. All rights reserved.
+    </footer>
