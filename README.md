@@ -40,3 +40,6 @@ This repository is intended for educational purposes only. It is designed to hel
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/php-forms-tutorial.git
+2. **Clone the reposity to access database**
+    ```bash
+   git clone https://github.com/89Omer/lecture-mysql-basics.git
