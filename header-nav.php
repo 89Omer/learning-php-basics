@@ -1,6 +1,6 @@
 <header>
         <div class="logo">
-            <img src="https://via.placeholder.com/50" alt="University Logo">
+            <img src="logo.png" alt="University Logo">
             <span>University Name</span>
         </div>
         <nav>
