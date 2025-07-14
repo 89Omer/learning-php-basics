@@ -9,6 +9,7 @@
                 <li><a href="#services">My Services</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <li><a href="loginpage.php">Login</a></li>
             </ul>
         </nav>
 </header>
